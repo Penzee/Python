@@ -12,4 +12,4 @@ flask + sqlite
 * 在虚拟机开启情况下，输入python run.py，然后在浏览器中打开127.0.0.1:5000访问
 ### 展示
 主页
-![主页](“https://github.com/PrideZH/Python/blob/master/images/主页.png”)
+![主页](“https://github.com/PrideZH/Python/raw/master/images/主页.png”)
