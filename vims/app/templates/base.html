@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8" />
+        <title>车辆管理系统</title>
+        <link rel="stylesheet" type="text/css" href="../static/css/base.css" />
+        <link rel="stylesheet" type="text/css" href="../static/css/home.css" />
+    </head>
+    <body>
+         <div class="Container">
+            <div class="Header"></div>
+             <!--左菜单-->
+            <div class="Menu">
+                <!--导航-->
+                <ul class="navigation">
+                  <li><a class="navigation-button" href="{{ url_for("index") }}">Home</a></li>
+                  <li><a class="navigation-button"  href="/add">添加</a></li>
+                </ul>
+            </div>
+            <div class="Content">
+                {% block content %}{% endblock %}
+            </div>
+            <div class="Bottom"></div>
+        </div>
+    </body>
+</html>

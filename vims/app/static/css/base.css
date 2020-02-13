@@ -1,0 +1,46 @@
+.Container {
+    width: 100%;
+    height: 900px;
+    float: left;
+}
+.Header {
+    width: 100%;
+    height: 5%;
+    float: left;
+    background: #212129;
+}
+.Menu {
+    width: 10%;
+    height: 90%;
+    float: left;
+    background: #333541;
+    color: #ffffff;
+}
+.Content {
+    width: 90%;
+    height: 90%;
+    float: right;
+}
+.Bottom {
+    width: 100%;
+    height: 5%;
+    float: left;
+    background: #212129
+}
+.navigation{
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+.navigation-button:link, .navigation-button:visited{
+    font-weight: bold;
+    text-align: center;
+    padding: 32px;
+    text-decoration: none;
+    display: block;
+    background-color: #212129;
+    color: #ffffff;
+}
+.navigation-button:active, .navigation-button:hover{
+    background-color: #333541;
+}

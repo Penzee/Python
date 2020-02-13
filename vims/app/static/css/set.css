@@ -1,0 +1,11 @@
+.find{
+    height: 60px;
+}
+.car-table{
+    background:#f1eff1;
+    width: 100%;
+}
+.car-table-cell{
+     background:#ffffff;
+    height: 32px;
+}

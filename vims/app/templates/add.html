@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<form method="post">
+    {{ form.csrf_token() }} <br/>
+    {{ form.type.label }}{{form.type}} <br/>
+    {{ form.manufacturer.label }}{{form.manufacturer}} <br/>
+    {{ form.grade.label }}{{form.grade}} <br/>
+    {{ form.seat.label }}{{form.seat}} <br/>
+    {{ form.displacement.label }}{{form.displacement}} <br/>
+    {{ form.gearbox.label }}{{form.gearbox}} <br/>
+    {{ form.colour.label }}{{form.colour}} <br/>
+    {{ form.price.label }}{{form.price}} <br/>
+    {{ form.submit }} <br/>
+</form>
+
+{% endblock %}

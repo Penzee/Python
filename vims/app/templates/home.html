@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+{% block content %}
+<div style="background:#f1eff1;width:100%;height:48px;margin-top:30px;line-height:50px;">
+    <span style="margin-left:20px">查询</span>
+</div>
+<div class="find">
+    <form method="post">
+    {{ form.csrf_token() }}
+    {{ form.type.label }}{{form.type}}
+    {{ form.manufacturer.label }}{{form.manufacturer}}
+    {{ form.grade.label }}{{form.grade}}
+    {{ form.seat.label }}{{form.seat}}
+    {{ form.submit }}  <br/>
+    {{ form.displacement.label }}{{form.displacement}}
+    {{ form.gearbox.label }}{{form.gearbox}}
+    {{ form.colour.label }}{{form.colour}}
+    {{ form.price.label }}{{form.price}}
+
+    </form>
+</div>
+<div style="background:#f1eff1;width:100%;height:50px;line-height:50px;">
+    <span style="margin-left:20px">车辆信息</span>
+</div>
+<div class="car-table">
+    <table class="car-table">
+        <tr>
+            <th class="www" >编号</th>
+            <th>型号</th>
+            <th>厂商</th>
+            <th>等级</th>
+            <th>座位数</th>
+            <th>排量</th>
+            <th>变速箱</th>
+            <th>颜色</th>
+            <th>价格</th>
+            <th>操作</th>
+        </tr>
+        {% for car in cars_part %}
+            {% if car != 0 %}
+                <tr class="car-table-cell">
+                    <td>{{ car.id }}</td>
+                    <td>{{ car.type }}</td>
+                    <td>{{ car.manufacturer }}</td>
+                    <td>{{ car.grade }}</td>
+                    <td>{{ car.seat }}</td>
+                    <td>{{ car.displacement }}</td>
+                    <td>{{ car.gearbox }}</td>
+                    <td>{{ car.colour }}</td>
+                    <td>{{ car.price }}</td>
+                    <td>
+                        <a class="operation" href="{{ url_for("delete_car", car_id=car.id) }}">删除</a>
+                        <a class="operation" href="{{ url_for("set", car_id=car.id) }}">修改</a>
+                    </td>
+                </tr>
+            {% else %}
+                <tr class="car-table-cell">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            {% endif %}
+        {% endfor %}
+    </table>
+</div>
+<div style="background:#f1eff1;width:100%;height:50px;line-height:50px;">
+    <span style="margin-left:20px"><a href="{{ url_for("previous_page") }}">上一页</a> {{ page }} <a href="{{ url_for("next_page") }}">下一页</a>  到第 页  确定</span>
+</div>
+{% endblock %}

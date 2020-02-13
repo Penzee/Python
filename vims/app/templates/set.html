@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<form method="post">
+    {{ form.csrf_token() }} <br/>
+    {{ form.type.label }}{{form.type(value=car.type)}} <br/>
+    {{ form.manufacturer.label }}{{form.manufacturer(value=car.manufacturer)}} <br/>
+    {{ form.grade.label }}{{form.grade(value=car.grade)}} <br/>
+    {{ form.seat.label }}{{form.seat(value=car.seat)}} <br/>
+    {{ form.displacement.label }}{{form.displacement(value=car.displacement)}} <br/>
+    {{ form.gearbox.label }}{{form.gearbox(value=car.gearbox)}} <br/>
+    {{ form.colour.label }}{{form.colour(value=car.colour)}} <br/>
+    {{ form.price.label }}{{form.price(value=car.price)}} <br/>
+    {{ form.submit }} <br/>
+</form>
+
+{% endblock %}
